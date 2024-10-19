@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:locaview/features/home/presentation/controllers/location_model.dart';
+import 'package:route_finder/features/home/presentation/controllers/location_model.dart';
 
 import '../../data/services/hive_services.dart';
 

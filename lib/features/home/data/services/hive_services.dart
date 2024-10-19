@@ -1,5 +1,5 @@
 import 'package:hive/hive.dart';
-import 'package:locaview/features/home/presentation/controllers/location_model.dart';
+import 'package:route_finder/features/home/presentation/controllers/location_model.dart';
 
 class HiveService {
   static const String _boxName = 'locationHistory';

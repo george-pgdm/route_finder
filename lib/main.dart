@@ -5,8 +5,8 @@ import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:locaview/core/utils/utility.dart';
-import 'package:locaview/features/home/presentation/controllers/location_model.dart';
+import 'package:route_finder/core/utils/utility.dart';
+import 'package:route_finder/features/home/presentation/controllers/location_model.dart';
 
 import 'core/resources/app_theme.dart';
 import 'routes/app_routes.dart';

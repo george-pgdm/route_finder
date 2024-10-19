@@ -7,13 +7,11 @@ import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
-import 'package:locaview/core/widgets/app_custom_button.dart';
-import 'package:locaview/core/widgets/profile_card.dart';
-import 'package:locaview/features/home/presentation/controllers/location_history_controller.dart';
-import 'package:locaview/features/home/presentation/pages/history_screen.dart';
-import 'package:locaview/features/home/presentation/pages/result_screen.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:permission_handler/permission_handler.dart';
+import 'package:route_finder/core/widgets/app_custom_button.dart';
+import 'package:route_finder/core/widgets/profile_card.dart';
+import 'package:route_finder/features/home/presentation/controllers/location_history_controller.dart';
+import 'package:route_finder/features/home/presentation/pages/history_screen.dart';
 
 import '../../../../core/resources/color_file.dart';
 import '../../../../core/utils/utility.dart';
@@ -66,7 +64,6 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // buildUserInfoWidget(size),
             SizedBox(height: size.height * 0.2, child: const ProfileCard()),
             SizedBox(
               height: size.height * 0.65,
@@ -121,76 +118,6 @@ class _HomeScreenState extends State<HomeScreen> {
             )
           ],
         ));
-  }
-
-  Container buildUserInfoWidget(Size size) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      alignment: Alignment.bottomLeft,
-      height: size.height * 0.2,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(21),
-          bottomRight: Radius.circular(21),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black26,
-            offset: Offset(0, 4), // Shadow position
-            blurRadius: 8.0, // Shadow blur radius
-          ),
-        ],
-        color: ColorFile.primaryColor,
-        // gradient: LinearGradient(
-        //   colors: [
-        //     ColorFile.primaryColor, // Start color
-        //     Colors.white, // End color
-        //   ],
-        //   begin: Alignment.centerLeft, // Start point of the gradient
-        //   end: Alignment.topCenter, // End point of the gradient
-        //   tileMode: TileMode.mirror,
-        // ),
-      ),
-      child: SizedBox(
-        height: 80,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CircleAvatar(
-              backgroundColor: Colors.white,
-              radius: 30,
-              child: Image.asset(
-                "assets/images/user_pic.png",
-                height: 45,
-                width: 45,
-                color: ColorFile.primaryColor,
-              ),
-            ),
-            const SizedBox(width: 16),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  "Robert Doe",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  "robertdoe@gmail.com",
-                  style: TextStyle(
-                    color: Colors.grey[200],
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
   }
 
   MapController sMapController = MapController();
@@ -307,12 +234,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           const SizedBox(height: 10),
-          // Image.asset(
-          //   "assets/images/dummy_map.jpg",
-          //   width: double.infinity,
-          //   height: 120,
-          //   fit: BoxFit.cover,
-          // ),
           SizedBox(
             height: 120,
             child: FlutterMap(
@@ -380,45 +301,6 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  Widget cardHistory(String type, locationData) {
-    return Card(
-      margin: const EdgeInsets.all(10),
-      shadowColor: ColorFile.primaryColor,
-      color: Colors.white,
-      elevation: 1,
-      surfaceTintColor: Colors.grey,
-      child: Container(
-        height: 200,
-        padding: const EdgeInsets.fromLTRB(20, 10, 20, 5),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  "assets/images/location_ic.png",
-                  height: 30,
-                  width: 30,
-                ),
-                const SizedBox(width: 10),
-                Text(
-                  type,
-                  style: const TextStyle(fontSize: 15, color: Colors.black),
-                )
-              ],
-            ),
-            const SizedBox(
-                height: 10), // Adjusted to create space for the dropdown
-            Image.asset(
-              "assets/images/dummy_map.jpg",
-              width: double.infinity,
-              height: 100,
-              fit: BoxFit.cover,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
   void searchLocation(String query) async {
     final url =

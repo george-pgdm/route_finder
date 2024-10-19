@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:locaview/features/home/presentation/controllers/location_history_controller.dart';
-import 'package:locaview/features/home/presentation/controllers/location_model.dart';
+import 'package:route_finder/features/home/presentation/controllers/location_history_controller.dart';
+import 'package:route_finder/features/home/presentation/controllers/location_model.dart';
 
 class HomeController extends GetxController {
   final LocationHistoryController _locationHistoryController = Get.find();

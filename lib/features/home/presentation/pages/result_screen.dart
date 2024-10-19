@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mapbox_navigation/flutter_mapbox_navigation.dart';
 import 'package:get/get.dart';
-import 'package:locaview/core/utils/utility.dart';
+import 'package:route_finder/core/utils/utility.dart';
 
 import '../../../../core/resources/color_file.dart';
 import '../../../../core/widgets/app_custom_button.dart';

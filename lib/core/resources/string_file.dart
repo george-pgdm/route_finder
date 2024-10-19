@@ -1,5 +1,5 @@
 class StringFile {
-  static const appName = "LocaView";
+  static const appName = "Route Finder";
 
 // Base
   static const ok = "Ok";
@@ -22,20 +22,4 @@ class StringFile {
   static const validPassword = "Password must have minimum seven.";
   static const validNumPassword =
       "Password must contain atleast one capital/small letter, one numeric and a symbol";
-
-  // Dashboard Screen
-  static const logout = "Logout";
-  static const highwayOutlets = "Highway Outlets";
-  static const subrdRecommend = "SubRD Recommendation";
-  static const wholesaleRecommend = "Wholesale Recommendation";
-  static const subrdBeats = "SubRD Beats";
-  static const hugliSubrdBeats = "Hugli SubRD Beats";
-  static const confidentialIntro =
-      "The information here is strictly confidential and solely for the use of Mondelez International and may not be reproduced or circulated.";
-  static const selectState = "Select State";
-  static const selectSubCategory = "Select Highway(s)";
-  static const selectDistrict = "Select Assigned District";
-  static const selectTaluk = "Select Assigned Taluk";
-  static const whatsHere = "Whats here?";
-  static const showDirection = "Show Direction";
 }

@@ -1,4 +1,4 @@
-import 'package:locaview/features/home/presentation/controllers/location_model.dart';
+import 'package:route_finder/features/home/presentation/controllers/location_model.dart';
 
 import '../services/hive_services.dart';
 

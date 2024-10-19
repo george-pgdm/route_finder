@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:get/get.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:locaview/core/utils/utility.dart';
-import 'package:locaview/core/widgets/app_custom_button.dart';
-import 'package:locaview/features/home/presentation/controllers/location_history_controller.dart';
-import 'package:locaview/features/home/presentation/pages/result_screen.dart';
-import 'package:permission_handler/permission_handler.dart';
+import 'package:route_finder/core/utils/utility.dart';
+import 'package:route_finder/core/widgets/app_custom_button.dart';
+import 'package:route_finder/features/home/presentation/controllers/location_history_controller.dart';
 
 import '../../../../core/resources/color_file.dart';
 import '../../../../core/widgets/profile_card.dart';
@@ -50,7 +48,6 @@ class _HistoryScreenState extends State<HistoryScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(height: size.height * 0.2, child: const ProfileCard()),
-
             historyData.isNotEmpty
                 ? SizedBox(
                     height: size.height * 0.66,
@@ -74,7 +71,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                       ).toList(),
                     ),
                   )
-                : Center(
+                : const Center(
                     child: Text(
                       "No data found!!",
                       style: TextStyle(
@@ -83,8 +80,6 @@ class _HistoryScreenState extends State<HistoryScreen> {
                       ),
                     ),
                   ),
-
-            // const SizedBox(height: 20),
             Container(
                 color: ColorFile.primaryColor,
                 height: size.height * 0.1,
@@ -140,7 +135,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                 const SizedBox(width: 10),
                 Text(
                   type,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     color: Colors.black,
                   ),

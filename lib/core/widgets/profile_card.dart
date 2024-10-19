@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:locaview/core/resources/color_file.dart';
+import 'package:route_finder/core/resources/color_file.dart';
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
