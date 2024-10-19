@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "436973770296",
+    "project_id": "locaview-7212f",
+    "storage_bucket": "locaview-7212f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436973770296:android:b3851c82d48af6a33fb8cd",
+        "android_client_info": {
+          "package_name": "com.routefinder.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA27T9azNFxSXMPkkP_1JmmClfIun5OFbk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
